@@ -1,3 +1,4 @@
+// Get elements from DOM
 let imgBox = document.getElementById("imgBox");
 let qrImage = document.getElementById("qrImage");
 let qrText = document.getElementById("qrText");
@@ -7,13 +8,15 @@ let loading = document.getElementById("loading");
 // Generate QR
 function generateQR() {
   if (qrText.value.length > 0) {
+    // Show loading text
     loading.style.display = "block";
 
     setTimeout(() => {
+      // Generate QR using API
       qrImage.src =
         `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize.value}x${qrSize.value}&data=` +
         encodeURIComponent(qrText.value);
-
+      // Show QR image box
       imgBox.classList.add("show-img");
       loading.style.display = "none";
     }, 500);
@@ -30,7 +33,7 @@ function downloadQR() {
   if (!qrImage.src) return;
 
   let img = new Image();
-  img.crossOrigin = "anonymous"; // important
+  img.crossOrigin = "anonymous";
 
   img.src = qrImage.src;
 

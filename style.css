@@ -4,12 +4,12 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+/* Background gradient */
 body{
     min-height: 100vh;
-    background: linear-gradient(135deg, #234fa2, #61819a);
+    background: linear-gradient(135deg, #0d1b36, #556876);
 }
-
+/* Main card container */
 .container{
     width: 400px;
     padding: 25px 35px;
@@ -25,36 +25,36 @@ body{
     border-radius: 10px;
     text-align: center;
 }
-
+/* Heading */
 .container h2{
     margin-bottom: 15px;
 }
-
+/* Labels */
 .container p{
      font-weight: 600;
      font-size: 14px;
      margin-top: 10px;
 }
-
+/* Text input */
 .container input[type="text"]{
     width: 100%;
     height: 45px;
-    border: 1px solid #494eea;
+    border: 1px solid #222da6;
     outline: 0;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
 }
-
+/* Range slider */
 .container input[type="range"]{
     width: 100%;
     margin: 10px 0;
 }
-
+/* Buttons */
 .container button{
     width: 100%;
     height: 45px;
-    background: linear-gradient(135deg, #194dad, #3c607a);
+    background: linear-gradient(135deg, #154194, #52636f);
     color: #fff;
     border:0;
     border-radius: 5px;
@@ -62,12 +62,12 @@ body{
     margin-top: 10px;
     transition: 0.3s;
 }
-
+/* Button hover effect */
 .container button:hover{
     transform: scale(1.05);
     background: linear-gradient(135deg, #1f53b2, #021829);
 }
-
+/* QR container */
 #imgBox{
     width:200px;
     border-radius:5px;
@@ -79,27 +79,27 @@ body{
     align-items: center;
     margin: 10px auto;
 }
-
+/* QR image */
 #imgBox img{
     width: 150px;
     padding: 10px;
 }
-
+/* Show QR when generated */
 #imgBox.show-img{
     max-height: 300px;
     border: 1px solid #d1d1d1;
 }
-
+/* Loading text */
 #loading{
     display: none;
     font-size: 12px;
     margin-top: 10px;
 }
-
+/* Error animation */
 .error{
     animation: shake 0.1s linear 10;
 }
-
+/* Shake effect */
 @keyframes shake{
     0%{ transform:translateX(0); }
     25%{ transform:translateX(-2px); }
